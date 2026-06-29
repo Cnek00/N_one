@@ -2,6 +2,7 @@ package com.example.N_ONE.notebook.service;
 
 import com.example.N_ONE.notebook.entity.Folder;
 import com.example.N_ONE.notebook.entity.Note;
+import com.example.N_ONE.notebook.entity.Tag;
 import com.example.N_ONE.notebook.entity.User;
 import com.example.N_ONE.notebook.repository.FolderRepository;
 import com.example.N_ONE.notebook.repository.NoteRepository;
@@ -11,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
