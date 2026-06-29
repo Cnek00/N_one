@@ -52,14 +52,14 @@ public class Note {
     // --- AUTOMATIC AUDITING FIELDS ---
 
     @CreatedDate
-    @Column(name = "created_at", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_at")
+    @Column(insertable = false)
     private LocalDateTime updatedAt;
 
     @CreatedBy
-    @Column(name = "created_by", updatable = false)
+    @Column(updatable = false)
     private String createdBy; // Notu hangi email adresli kullanıcı oluşturdu otomatik yazılacak!
 }

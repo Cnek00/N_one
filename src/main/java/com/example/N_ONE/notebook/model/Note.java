@@ -18,6 +18,7 @@ public class Note {
     @Column(columnDefinition = "TEXT")
     private String content;
 
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     // --- ADM 1: Kullanıcı İlişkisi Eklendi ---
