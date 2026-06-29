@@ -49,8 +49,8 @@ public class NoteService {
                     .filter(tag -> tag.getUser().getId().equals(user.getId()))
                     .toList());
         }
-
-        Note note = Note.builder()
+        
+        Note note = ((Object) Note.builder())
                 .title(noteRequest.getTitle())
                 .content(noteRequest.getContent())
                 .user(user)

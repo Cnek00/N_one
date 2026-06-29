@@ -7,10 +7,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "users")
-@Data
-@Builder
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -26,6 +27,9 @@ public class User {
     @Column(name = "password_hash")
     private String passwordHash;
 
+    // DÜZELTME: name = "created_at" kaldırıldı.
+    // Hibernate naming strategy "createdAt" -> "created_at" dönüşümünü zaten yapıyor.
+    // İkisini birden yazmak Hibernate 7'de DuplicateMappingException fırlatıyor.
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
